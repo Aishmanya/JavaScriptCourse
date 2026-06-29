@@ -1,0 +1,12 @@
+h1{
+    color: yellowgreen;
+    background-color: green;
+}
+
+#mybox{
+    height: 35px;
+    width: 35px;
+    background-color: aqua;
+    color: red;
+    border: 2px solid black;
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSO Safe DataPipeline - Sign Up</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Configure Tailwind for custom animations -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Placeholder for original background image - using a strong blue gradient */
+            background: linear-gradient(135deg, #1e3a8a 0%, #001f4d 100%);
+            min-height: 100vh;
+        }
+
+        /* Custom Keyframes for floating effect on the Shield */
+        @keyframes pulse-float {
+            0%, 100% {
+                transform: translateY(0px) scale(1);
+                box-shadow: 0 0 10px rgba(0, 70, 150, 0.3);
+            }
+            50% {
+                transform: translateY(-5px) scale(1.02);
+                box-shadow: 0 0 20px rgba(0, 70, 150, 0.6);
+            }
+        }
+
+        /* Applying the keyframe animation */
+        .animate-pulse-float {
+            animation: pulse-float 4s ease-in-out infinite;
+        }
+
+        /* Custom animation for main container entrance */
+        @keyframes slide-fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-slide-fade-in {
+            animation: slide-fade-in 0.8s ease-out forwards;
+        }
+
+        /* Dynamic gradient for the button */
+        .btn-custom {
+            background-image: linear-gradient(90deg, #667eea, #764ba2);
+            transition: all 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-image: linear-gradient(90deg, #764ba2, #667eea);
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(118, 75, 162, 0.4);
+        }
+        
+        /* Fixed icon positioning relative to parent input field */
+        .input-wrapper {
+            position: relative;
+        }
+        .input-wrapper .input-icon {
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            transform: translateY(-50%);
+            color: #2c7fee;
+            z-index: 10;
+        }
+        .input-wrapper input {
+            padding-left: 40px !important; /* Ensure space for the icon */
+        }
+
+        /* Responsive adjustments for the left/right split */
+        .signup-container-mobile {
+            display: flex;
+            flex-direction: column;
+        }
+        @media (min-width: 768px) {
+            .signup-container-mobile {
+                flex-direction: row;
+            }
+            .image-container-md {
+                width: 50%;
+                border-radius: 1rem 0 0 1rem;
+            }
+            .form-container-md {
+                width: 50%;
+                border-radius: 0 1rem 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+
+    <!-- Hero Text (Top-Left, Animated) -->
+    <div class="absolute top-10 left-10 md:top-1/4 md:left-[10%] p-4 text-left text-white max-w-sm lg:max-w-md 
+                opacity-0 animate-slide-fade-in" style="animation-delay: 0.3s;">
+        <span class="font-light text-2xl md:text-3xl lg:text-4xl text-blue-200">Empowering your data with</span>
+        <br>
+        <span class="font-extrabold text-3xl md:text-4xl lg:text-5xl leading-tight text-white shadow-lg">elegant security</span>
+    </div>
+
+    <div class="w-full max-w-xs sm:max-w-md md:max-w-4xl lg:max-w-5xl h-auto my-8 
+                bg-white/95 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-sm 
+                opacity-0 animate-slide-fade-in signup-container-mobile">
+        
+        <!-- LEFT PANEL: Security Banner & Logo -->
+        <div class="image-container-md w-full p-6 md:p-8 flex flex-col justify-center items-center 
+                    bg-gradient-to-br from-blue-50 to-blue-200 text-blue-900">
+            
+            <!-- Shield Image & Title -->
+            <div class="flex flex-col items-center text-center">
+                <!-- Using a strong placeholder SVG shield instead of a local image -->
+                <svg class="h-24 w-24 text-blue-700 mb-3 animate-pulse-float" 
+                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M11.96 2.05A.75.75 0 0 1 12 2c.254 0 .497.05.728.143l9.468 3.013a.75.75 0 0 1 .491.707v10.516c0 .285-.213.543-.532.543-.177 0-.34-.04-.492-.11L12 15.672l-9.665 4.093c-.152.07-.315.11-.492.11-.319 0-.532-.258-.532-.543V5.863a.75.75 0 0 1 .491-.707l9.468-3.013A.75.75 0 0 1 11.96 2.05Zm0 12.396.963.408c.152.064.316.103.488.103.208 0 .405-.045.589-.133 0 0 0 0 .001 0l8.769-3.712V6.3l-8.723 2.783a1.5 1.5 0 0 1-1.468 0L3.195 6.3v7.352l8.769 3.712.001 0c.184.088.381.133.589.133.172 0 .336-.039.488-.103l.963-.408Z" clip-rule="evenodd" />
+                </svg>
+                
+                <h1 class="text-2xl lg:text-3xl font-extrabold text-blue-900 mt-2">NSO Safe DataPipeLine</h1>
+                <h5 class="text-sm font-medium text-gray-600 mt-1">Secure Your Data. Streamline Flow</h5>
+                
+                <!-- Security Indicators -->
+                <div class="flex space-x-4 mt-4 text-center justify-center">
+                    <div class="flex items-center space-x-1">
+                        <i class="fa-solid fa-lock text-lg text-blue-700"></i>
+                        <span class="text-blue-800 font-semibold text-sm">Secure</span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                        <i class="fa-solid fa-check text-xl text-blue-700"></i>
+                        <span class="text-blue-800 font-semibold text-sm">Compliant</span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                        <i class="fa-solid fa-globe text-lg text-blue-700"></i>
+                        <span class="text-blue-800 font-semibold text-sm">Global</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Placeholder for cyber security graphic -->
+            <div class="mt-8 text-sm text-blue-900/70 font-light hidden md:block">
+                Advanced Encryption | Zero Trust Architecture | Real-time Auditing
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL: Sign Up Form -->
+        <div class="form-container-md w-full p-8 md:p-10 bg-white shadow-xl md:shadow-none">
+            
+            <div class="text-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-800">Sign up</h2>
+                <h6 class="text-sm text-gray-500 mt-1">NSS Safe Data Tool</h6>
+            </div>
+
+            <form class="space-y-5">
+                
+                <!-- Username -->
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-user input-icon"></i>
+                    <input type="text" class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 font-medium placeholder-gray-400" 
+                           id="name" placeholder="Username">
+                </div>
+
+                <!-- Email -->
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                    <input type="email" class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 font-medium placeholder-gray-400" 
+                           id="email" placeholder="Enter your email">
+                </div>
+                
+                <!-- Password -->
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-key input-icon"></i>
+                    <input type="password" class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 font-medium placeholder-gray-400" 
+                           id="password" placeholder="Create your strong password">
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 font-medium placeholder-gray-400" 
+                           id="confirm-password" placeholder="Confirm Password">
+                </div>
+                
+                <!-- Submit Button with Hover Animation -->
+                <button type="submit" class="btn-custom w-full p-3 mt-8 text-white font-extrabold rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-purple-300">
+                    Sign Up
+                </button>
+
+                <p class="text-center text-sm mt-4 text-gray-600">
+                    Already have an account? 
+                    <a href="#" class="text-blue-600 font-bold hover:text-blue-800 transition duration-150">Log in</a>
+                </p>
+                
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Terms -->
+    <p class="text-sm font-semibold text-blue-200/80 mb-4">
+        <a href="#" class="hover:text-white transition-colors">Terms NSO Service</a> | 
+        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+    </p>
+
+</body>
+</html>

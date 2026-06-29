@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+</head>
+<body>
+    <h1 id="header">Learning DOM</h1>
+    <button onclick="changeHeader()">Click this to change header</button>
+
+    <ul class="mylist">
+        <li>Python</li>
+    </ul>
+
+    <script>
+        function changeHeader(){
+            var header= document.getElementById("header");
+            header.innerHTML="DOM Manipulated";
+        }
+
+        function addElement(elem) {
+            const li=document.createElement('li')
+            li.innerHTML=elem
+            document.querySelector('.mylist').appendChild(li)
+        }
+
+        function addElementOptimize(elem) {
+            const li=document.createElement('li')
+            li.appendChild(document.createTextNode(elem))
+            document.querySelector('.mylist').appendChild(li)
+        }
+
+        // EDIT AND REMOVE USING DOM
+        const secondelem=document.querySelector("li:nth-child(2)")
+        // 1 simplest method
+        secondelem.innerHTML='C++'
+        //optimized way (by creating and appending new element)
+        const newli=document.createElement('li')
+        newli.textContent='C++'
+        secondelem.replaceWith(newli)
+
+        //edit M-2
+        const firstlang=document.querySelector("li:nth-child(1)")
+        firstlang.outerHTML='<li> C++ </li>'
+
+        //REMOVE
+        const lastlang= document.querySelector('li:last-child')
+        lastlang.remove()
+        
+
+    </script>
+    
+</body>
+</html>

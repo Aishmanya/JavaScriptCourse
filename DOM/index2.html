@@ -1,0 +1,80 @@
+<!-- first line tells the type of doc i.e HTML -->
+<!DOCTYPE html>  
+<!-- here comes the document part -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+<!-- u can run directly like this -->
+<script>
+    const sel=document.querySelector('h1')
+    console.log(sel);
+
+    // PARENT CHILDREN RELATION QUERIES
+    const parentdiv = document.querySelector('.parent')
+    console.log(parentdiv) //to access parent
+    console.log(parentdiv.children);  //to access all childrens
+    console.log(parentdiv.children[1]);  //to access index1 children
+
+    // u can apply any dom manipulation liek this
+    parentdiv.children[1].style.color = 'red'
+
+    // to access just the 1st child directly from parent
+    console.log(parentdiv.firstElementChild);
+
+    // similarly, to access just the last child directly from parent
+    console.log(parentdiv.lastElementChild);
+
+    // we can also move to child to parent 
+
+    const childiv=document.querySelector('.day')
+    console.log(childiv.parentElement)
+
+    // to move to next sibling
+    console.log(childiv.nextElementSibling);
+
+    // ~~~~~~ INTERESTING FACT ~~~~~~~
+    console.log("Total Nodes:", parentdiv.childNodes);
+    // see its 'childNodes' not 'children'
+
+    // Now, this gives all TOTAL nodes of a parent which includes all kinds nodes like text element (tags maybe)etc so 
+    // even if there are like 4 nodes visible the o/p will give like 9-10 nodes coz it counts  every enter as one text element
+    // then div as one element then uske andar ka content as one element and so on....
+
+    
+    //  +++++++   CREATING OUR OWN ELEMENT , ADDING FEATURES IN IT , AND FINALLY APPENDING IT   +++++++++++++++++++++
+    const mydiv=document.createElement('div')
+    console.log(mydiv);
+    mydiv.className = 'main'
+    mydiv.id = 'box'
+    // for setting any other attribute
+    mydiv.setAttribute('title','mydiv box')
+    mydiv.style.backgroundColor = 'pink'
+    mydiv.style.padding='10px'
+    // Two ways of adding text
+    // 1
+    mydiv.innerText = 'HEY MANYA' 
+    // 2 -- by creating a textnode and then appending it
+    const myText=document.createTextNode("Hello Manya")
+    mydiv.appendChild(myText)
+
+    // AND FINALLY APPENDING IT
+    document.body.appendChild(mydiv)
+    
+    
+</script>
+</html>
