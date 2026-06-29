@@ -58,7 +58,8 @@ function checkGuess(userGuess){
 }
 
 function displayGuess(userGuess){
-    // 
+    // to display
+    
 }
 
 function displayMsg(msg){
