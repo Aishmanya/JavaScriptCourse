@@ -22,4 +22,15 @@
 
 // ++++++++++++++++ SELF Learn   "SET TIMEOUT SET INTERVAL AND FETCH" ++++++++++++++++++++
 
+// setTimeout(function(),time in ms) :- kitne time ke baad ye chij ko karwana h !
+// It is a function/method only but sath me ek api v call karta
+// ye continuously nhi chalta 
+
+// setInterval :- ye continuously chalta rehta certain interval ke gap me
+
+
+
+
+
+
 

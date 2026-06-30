@@ -6,11 +6,30 @@
     <title>Project 1 with Async</title>
 </head>
 <body>
-    <h1>This is Async Project</h1>
+    <h1>This is Async Project using SetTimeout</h1>
     <button id="stop">STOP</button>
     
 </body>
 <script>
-    
+    const printName = function(){
+        console.log("Manya")
+    }
+
+    const changeText = function(){
+        const heading = document.querySelector('h1')
+        heading.innerHTML = 'Project no. 1'
+    }
+
+    const changing = setTimeout(changeText,2000);
+
+    // Ab if we want ki ye event ko hone se mai rokdu somehow like say 2s se oehle maine koi button se rok diya usse
+
+    document.querySelector('#stop').addEventListener('click',function(e){
+        clearTimeout(changing)
+        console.log('Stopped !')
+    })
+
+
+
 </script>
 </html>
