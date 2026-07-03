@@ -29,8 +29,10 @@
 // setInterval :- ye continuously chalta rehta certain interval ke gap me
 
 
+// setTimeout , setInterval are a part of Async only
+// and Async ke liye hamesha web pe he request nhi bhejna hota Async is based on JS only [learn more through gpt] 
 
-
+// default engine of JavaScript is Sync but whole JS  is Async as it itself includes APIs n all needed to convert Sync to Async.
 
 
 
