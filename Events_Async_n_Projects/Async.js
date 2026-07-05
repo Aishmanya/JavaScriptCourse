@@ -20,7 +20,7 @@
  * 2. Read file Async
  */
 
-// ++++++++++++++++ SELF Learn   "SET TIMEOUT SET INTERVAL AND FETCH" ++++++++++++++++++++
+// ++++++++++++++++ SELF Learn   "SET TIMEOUT SET INTERVAL AND FETCH" +++++++++++++++++++++
 
 // setTimeout(function(),time in ms) :- kitne time ke baad ye chij ko karwana h !
 // It is a function/method only but sath me ek api v call karta
