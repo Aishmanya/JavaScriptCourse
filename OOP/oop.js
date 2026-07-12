@@ -55,7 +55,7 @@ function User(username,loginCount,isLoggedIn){
         console.log(`Welcome ${this.username}`)
     }
 
-    return this // u can comment then also output aaega
+    return this // you can comment then also output aaega
 }
 
 const userOne = User("manya",10,true) //prints it + other properties of this like fetch global setTimeout etc.
